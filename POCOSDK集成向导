@@ -1,0 +1,15 @@
+Cocos2dx-lua
+PocoSDK supports cocos2dx-lua version >= 3.1.
+
+Clone the sdk source code from poco-sdk repo.
+Copy the cocos2dx-lua/poco folder to your project script folder. You can rename the folder if you wish.
+Initialize poco-sdk by copying following code to your game initialization script.
+local poco = require('poco.poco_manager')
+poco:init_server(15004)  -- default port number is 15004, change to another if you like
+Note
+
+Your cocos2dx-lua project should at least enable socket or socket.core module, as poco requires this module to setup a tcp server at runtime.
+Note
+
+If your cocos2dx-lua project does not have mime module, it still works but a little slow.
+After integration, you can start to play with poco. Or if you have any problems, feel free to open an issue here. Title format: [cocos2dx-lua sdk integration] xxx
